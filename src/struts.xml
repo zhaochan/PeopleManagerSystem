@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.custom.i18n.resources" value="msg" />
+	
+	<constant name="struts.multipart.maxSize" value="10485760" />
+
+
+	<package name="account" namespace="/" extends="struts-default">
+		<action name="account*" class="web.action.AccountAction"
+			method="{1}">
+			<result name="vcode" type="stream">
+				<param name="contentType">image/jpeg</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<result name="fail">/error/userLoginError.jsp</result>
+			<result name="login">/user/loginSuccess.jsp</result>
+			<result name="quit">/user/userInfo.jsp</result>
+			<result name="loginm">/login/home.jsp</result>
+			<result name="loginmfail">/login/login.jsp</result>
+		</action>
+
+
+		<action name="userinfo*" class="web.action.UserinfoAction"
+			method="{1}">
+			<result name="register">/user/registerSuccess.jsp</result>
+			<result name="findbyusername">/user/userInfo.jsp</result>
+			<result name="find">/user/userInfo.jsp</result>
+			<result name="revamp">/user/revampSuccess.jsp</result>
+			<result name="fail">/error/userregisterError.jsp</result>
+			<result name="findallm">/login/list.jsp</result>
+			<result name="findbynamam">/login/edit.jsp</result>
+			<result name="findbyname1">/login/view.jsp</result>
+			<result name="adduserm">/login/list.jsp</result>
+			<result name="edituserm">/login/list.jsp</result>
+		</action>
+
+
+
+		<action name="product*" class="web.action.ProductAction"
+			method="{1}">
+			<interceptor-ref name="defaultStack">
+				<!-- 限制单个文件大小上限为5120K -->
+				<!-- 单个文件大小上限为51200K -->
+				<param name="fileUpload.maximumSize">5242880</param>
+				<!--文件扩展名限制为jpg、png、bmp -->
+				<param name="fileUpload.allowedExtensions">jpg,png,bmp,gif,ico</param>
+			</interceptor-ref>
+			<result name="upload">/user/userInfo.jsp</result>
+			<result name="find">/goods/goodsItem.jsp</result>
+			<result name="findbyproductid">/goods/goodsInfo.jsp</result>
+			<result name="findgoodsm">/login/goodslist.jsp</result>
+		</action>
+
+		<action name="cart*" class="web.action.CartAction" method="{1}">
+			<result name="addcart">/cart/list.jsp</result>
+			<result name="mycart">/cart/list.jsp</result>
+			<result name="deleteallcart">/cart/list.jsp</result>
+			<result name="deletecart">/cart/list.jsp</result>
+			<result name="buy">/order/order.jsp</result>
+			<result name="deleteorder">/order/order.jsp</result>
+			<result name="myorder">/order/order.jsp</result>
+			<result name="collection">/collect/collect.jsp</result>
+			<result name="mycollection">/collect/collect.jsp</result>
+			<result name="deletecollection">/collect/collect.jsp</result>
+		</action>
+		
+		<action name="search*" class="web.action.SearchAction" method="{1}">
+			<result name="find">/goods/goodsItem.jsp</result>
+		</action>
+
+
+	</package>
+
+</struts>

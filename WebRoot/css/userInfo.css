@@ -1,0 +1,77 @@
+body {
+	
+	background:#fff url(images/bg.gif) repeat;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	font-size:12px;
+	line-height:16px;
+	color:#636363;
+}
+
+#content{
+	
+background:url(images/center_bg_repeat.gif) repeat-y center;
+
+}
+
+.cl { font-size:0; line-height:0; clear:both; display:block; height:0; }
+#header { height:72px; background:url(images/header.gif); position:relative;}
+h1#logo { font-size:0; line-height:0; width:156px; height:64px; float:left; }
+h1#logo a{ display:block; height:70px; text-indent: -4000px; background:url(images/logo.gif); }
+.shell { width:940px; margin:0 auto; padding:10px; background:#fff; }
+#navigation { float:right; white-space:nowrap; }
+#navigation ul{ list-style-type: none; height:64px; font-weight: bold; float:left;}
+#navigation ul li{ float:left; display:inline; }
+#navigation ul li a{ float:left; height:72px; line-height:64px; text-decoration: none; color:#fff; padding:0 16px;}
+#navigation ul li a.active,
+#navigation ul li a:hover{ background:#fff; color:#8b0000; }
+
+#cart { float:right; width:160px; top:0; right:0; height:51px; background:#8b0000; color:#fff; padding:13px 10px 0 10px; white-space:nowrap; line-height:20px;}
+a.cart-link { color:#fff; background:url(images/cart-link.gif) no-repeat 0 0; padding:0 0 0 32px; text-decoration: none;}
+a.cart-link1 { color:#fff; background:url() no-repeat 0 0; padding:0 0 0 32px; text-decoration: none;}
+a.cart-link:hover { text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------footer------------------*/
+.footer{
+clear:both;
+width:960px;
+margin:auto;
+background:url(images/footer_bg.jpg) no-repeat center;
+height:65px;
+}
+.copyright{
+float:left;
+padding:30px 0 0 15px;
+color:#6996c0;
+}
+.copyright a{
+color: #2A1C11;
+text-decoration:none;
+}
+.footer_links{
+float:right;
+padding:30px 15px 0 0;
+}
+.footer_links a{
+text-decoration:none;
+color: #2A1C11;
+padding-left:10px;
+}
+.footer_links a:hover{
+text-decoration:underline;
+color: #2A1C11;
+}
+.footer_link1{
+	float:left;
+	padding:15px 15px 0 250px;
+	color:#FF6699;
+}

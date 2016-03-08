@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.store.entity">
+	<class name="Products"  table="products">
+		<id name="productid" type="int" column="productid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="username" type="string" column="username"></property>
+		<property name="description" type="string" column="description"></property>
+		<property name="price" type="double" column="price"></property>
+		<property name="category" type="string" column="category"></property>
+		<property name="photo1" type="string" column="photo1"></property>
+		<property name="photo2" type="string" column="photo2"></property>
+		<property name="releasedate" type="date" column="releasedate"></property>
+		<property name="status" type="int" column="status"></property>
+		
+	</class>
+	
+</hibernate-mapping>
