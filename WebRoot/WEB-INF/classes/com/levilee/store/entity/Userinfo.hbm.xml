@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.store.entity">
+	<class name="Userinfo"  table="Userinfo">
+		<id name="username" type="string" column="username">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="sex" type="string" column="sex"></property>
+		<property name="email" type="string" column="email"></property>
+		<property name="phonenumber" type="string" column="phonenumber"></property>
+		<property name="address" type="string" column="address"></property>
+		<property name="regdate" type="date" column="regdate"></property>
+	</class>
+</hibernate-mapping>

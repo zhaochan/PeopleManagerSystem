@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.store.entity">
+	<class name="Account"  table="account">
+		<id name="username" type="string" column="username">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="password" type="string" column="password"></property>
+		<property name="status" type="int" column="status"></property>
+	</class>
+</hibernate-mapping>
